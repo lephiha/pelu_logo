@@ -91,3 +91,9 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        alert('Đã copy: ' + text);
+    });
+}
